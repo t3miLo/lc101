@@ -20,7 +20,6 @@ def encrypt(text, key):
             key += 1
             if key == len(key_number):
                 key = 0
-        # counter += 1
 
     return new_message
 
