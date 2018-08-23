@@ -8,17 +8,17 @@
 
 def get_country_codes(prices):
     # your code here
-    alpha = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
     price_list = list(prices.split("$"))
     country_code = ''
 
     for each_word in price_list:
         for each_letter in each_word:
-            if each_letter in alpha:
+            if each_letter.isalpha():
                 country_code += each_letter
 
         country_code += ', '
-    print(country_code)
+
     new_country = country_code[-1::-1].replace(',', '', 2)
     print(new_country[:1:-1])
 

@@ -6,6 +6,7 @@ def encrypt(text, key):
 
     key_number = []
     new_message = ''
+
     for each_letter in list(key):
         key_number.append(alphabet_position(each_letter.lower()))
 
