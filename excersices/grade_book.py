@@ -8,20 +8,25 @@
 def main():
     roster = input('Input the student names for the class roster with a space only!:')
     roster_split = roster.split()
-    grades = input(
-        'Input the grades for each student in the same order as when you inputed the name!:')
-    grade_split = grades.split()
+    # grades = input(
+    # 'Input the grades for each student in the same order as when you inputed the name!:')
+    # grade_split = grades.split()
     roster_class = {}
 
     counter = 0
 
     for name in roster_split:
-        roster_class[name] = grade_split[counter]
+        roster_class[name] = float(input(
+            'Grade for %s: ' % (name)))
         counter += 1
 
+    avg = 0.0
     print('Class Roster:')
     for key in roster_class:
-        print('%s %d' % (key, roster_class[key])
+        avg += float(roster_class[key])
+        print('%s (%.1f)' % (key, roster_class[key]))
+
+    print('Avarage Grade in class: %.1f' % (avg / len(roster_class)))
 
 
 if __name__ == '__main__':
