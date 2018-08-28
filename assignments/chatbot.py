@@ -24,25 +24,34 @@ class Chatbot:
 
     def greeting(self):
         """ Returns the Chatbot's way of introducing itself. """
-        return "Hello, my name is " + self.name
+        return "Hello, my name is " + self.name + ' '
 
     def response(self, prompt_from_human):
         """ Returns the Chatbot's response to something the human said. """
-        return "It is very interesting that you say: '" + prompt_from_human + "'"
+        return "It is very interesting that you say: '" + prompt_from_human + "' "
 
 
-class BoredChatbot:
+class BoredChatbot(Chatbot):
 
-    def __init__(self, int_message):
-        self.message = int_message
-        print(self.message)
+    def __init__(self, name):
+        super().__init__(name)
+
+    def response(self, human_message):
+        if len(human_message) >= 20:
+            return 'Sorry can you repeat yourself I dosed of with your essay!!!'
+        else:
+            return super().response(human_message)
+
+        # make a chatbot
+        # sally = Chatbot("Sally")
+        # introduce the chatbot and allow the user to say something
+        # human_message = input(sally.greeting())self.name = name
+        # respond to the user
+        # print(sally.response(human_message))
+
+        # TODO: keep reading! see below
 
 
-# make a chatbot
-sally = Chatbot("Sally")
-# introduce the chatbot and allow the user to say something
-human_message = input(sally.greeting())
-# respond to the user
-print(sally.response(human_message))
-
-# TODO: keep reading! see below
+james = BoredChatbot('James')
+human_message = input(james.greeting())
+print(james.response(human_message))
