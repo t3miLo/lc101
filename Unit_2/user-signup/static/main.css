@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    width: 450px;
+}
+
+.signup {
+    text-align: center;
+}
+
+.error {
+    color: red;
+    font-size: 1em;
+    padding: 10px 5px;
+}
+
+.align-center {
+    display: block;
+    margin: 1.0em 20em;
+    text-align: center;
+}
+
+form {
+    width: 400px;
+}
+
+form section div label {
+    padding: 10px 0px;
+    margin: 0px 10px;
+    text-align: center;
+    display: block;
+}
+
+.submit {
+    padding: 10px 0px;
+}
