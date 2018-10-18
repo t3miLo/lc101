@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <div class="container">
+        <h3> Add a new post</h3>
+        <form action="" method='post'>
+            <label class='space'>
+                Author:
+                <input   type="text" name='author' >
+            </label>
+            <label class='space'>
+                Title:
+                <input type="text" name='title' >
+            </label>
+            <label class='space'>
+                Post:
+                <textarea class='area' name='body' value='Post Body'></textarea>
+            </label>
+            <label class='space'>
+                <input type="submit" name='submit'  value='Submit Post!'>
+            </label>
+        </form>
+    </div>
+
+{% endblock %}
